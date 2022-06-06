@@ -1,0 +1,36 @@
+.footer {
+	font-family: $mainFont;
+	color: white;
+	background-color: black;
+	font-size: 1.4rem;
+
+	section {
+		margin: 5px 0;
+	}
+
+		.footer-link {
+			text-decoration: none;
+			color: white;
+			list-style-type: none;
+			padding: 0.1rem 0;
+
+			&:hover {
+				color: $highlightColor;
+				font-weight: bold;
+			}
+		}
+
+	.footer__contact {
+		img {
+			height: 1.3em;
+		}
+
+		div {
+			a {
+				img {
+					height: 2.5rem;
+				}
+			}
+		}
+	}
+}

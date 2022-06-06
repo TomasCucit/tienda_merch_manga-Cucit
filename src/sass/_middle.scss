@@ -1,0 +1,297 @@
+.background {
+    * {
+        animation: fadeIn 1s;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    background: url(../img/backgroundMiddle.png),
+    rgb(252, 252, 252);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-position: center;
+
+    .header__blend {
+        width: 100%;
+        height: 6rem;
+        background: url(../img/backgroundTopBlend.png), linear-gradient(rgb(36, 36, 36), white);
+        background-position: center bottom;
+        background-blend-mode: multiply;
+        mix-blend-mode: multiply;
+        animation: fadeInDown 0.7s;
+    }
+
+    .footer__blend {
+        width: 100%;
+        height: 6rem;
+        background: url(../img/backgroundBottomBlend.png), linear-gradient(white, rgb(37, 30, 30));
+        background-blend-mode: multiply;
+        mix-blend-mode: multiply;
+        animation: fadeInUp 0.7s;
+    }
+
+    /*formats for items inside panel-like boxes*/
+    .boxItem {
+        background-color: white;
+        border: 3px;
+        margin: 0;
+        border-color: black;
+        border-style: solid;
+        border-radius: 7px;
+        overflow: hidden;
+    }
+
+    .boxText {
+        padding: 1rem;
+        color: black;
+        font-family: $mainFont;
+    }
+
+    .boxDecoImg {
+        object-fit: cover;
+    }
+
+    .boxSectionTitle {
+        text-align: center;
+        grid-column: 1 / -1;
+    }
+
+    .square {
+        /*makes element square*/
+        object-fit: contain;
+        max-width: 150px;
+        max-height: 150px;
+        width: 100%;
+    }
+
+    .titleBodyContainer {
+        /*For elements that have a pair of head-text elements, like reviews*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        * {
+            font-weight: 500;
+            margin: 0;
+            padding: 5px;
+        }
+    }
+
+    .textLinks {
+        color: $highlightColor;
+
+        &:hover {
+            text-decoration: none;
+            color: $highlightColor;
+            font-weight: bold;
+        }
+    }
+
+    .row {
+        img {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    .products {
+        a {
+            &:hover {
+                color: $highlightColor;
+                transform: scale(120%);
+            }
+
+            transition: all 0.2s ease-in-out;
+            font-family: $flavorFont;
+            color: black;
+            font-size: 2rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        div {
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                transform: scale(120%);
+            }
+        }
+
+        img {
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                transform: scale(120%);
+            }
+        }
+
+        h4 {
+            display: none;
+        }
+    }
+
+    .reviewItem {
+        font-size: 1rem;
+        max-width: 85%;
+        width: fit-content;
+        height: 100%;
+
+        h4 {
+            display: block;
+        }
+    }
+
+    .section__contact__form{
+        input,
+        textarea {
+            font-family: $normalFont;
+            max-width: 100%;
+        }
+        p {
+           margin: 5px 0; 
+        }
+    }
+
+    /* INDEX */
+    .container {
+        .intro {
+            @media (min-width: $bp-md) {
+                display: grid;
+                grid-template-rows: repeat(10, 6rem);
+                grid-template-columns: repeat(6, 1fr);
+                gap: 2rem;
+            }
+        }
+
+        .intro__1 {
+            order: 1;
+        }
+
+        .intro__2 {
+            order: 3;
+        }
+
+        .intro__3 {
+            order: 5;
+        }
+
+        .intro__imgCrack {
+            order: 6;
+        }
+
+        .intro__imgGriffith {
+            order: 2;
+        }
+
+        .intro__imgLandscape {
+            order: 4;
+        }
+
+        @media (min-width: $bp-sm) {
+            .intro__1 {
+                order: 1;
+            }
+
+            .intro__2 {
+                order: 3;
+            }
+
+            .intro__3 {
+                order: 8;
+            }
+
+            .intro__imgCrack {
+                order: 7;
+            }
+
+            .intro__imgPuck {
+                display: none;
+            }
+
+            .intro__imgGriffith {
+                order: 2;
+            }
+
+            .intro__imgZodd {
+                order: 5;
+            }
+
+            .intro__imgLandscape {
+                order: 6;
+            }
+        }
+
+        @media (min-width: $bp-md) {
+            .boxTextFit {
+                height: fit-content;
+            }
+
+            .intro__1 {
+                grid-row: 1 / 3;
+                grid-column: 1 / 6;
+                z-index: 2;
+            }
+
+            .intro__2 {
+                grid-row: 5 / 8;
+                grid-column: 3 / 7;
+                z-index: 2;
+            }
+
+            .intro__3 {
+                grid-row: 9 / 11;
+                grid-column: 1 / 5;
+                z-index: 2;
+            }
+
+            .intro__imgGuts {
+                grid-row: 2 / 4;
+                grid-column: 5 / 7;
+                z-index: 1;
+                max-width: 100%;
+            }
+
+            .intro__imgGriffith {
+                grid-row: 4/ 5;
+                grid-column: 2 / 6;
+                z-index: 1;
+                max-width: 100%;
+                height: 175%;
+                transform: scaleX(-1);
+            }
+
+            .intro__imgPuck {
+                grid-row: 8 / 10;
+                grid-column: 5 / 7;
+                z-index: 0;
+                max-width: 100%;
+                height: 100%;
+                display: flex;
+            }
+
+            .intro__imgZodd {
+                grid-row: 6 / 11;
+                grid-column: 1 / 3;
+                z-index: 1;
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+            .intro__imgCrack {
+                display: none;
+            }
+
+            .intro__imgLandscape {
+                grid-row: 11 / 13;
+                grid-column: 1 / 7;
+                max-height: 270px;
+            }
+        }
+    }
+}

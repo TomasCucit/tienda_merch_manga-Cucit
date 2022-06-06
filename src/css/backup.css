@@ -1,0 +1,437 @@
+/* font import */
+@font-face {
+    font-family: "Help Me";
+    src: url(../fonts/HelpMe.ttf);
+}
+
+@font-face {
+    font-family: "Nightcore Demo";
+    src: url(../fonts/Nightcore\ Demo.ttf);
+}
+
+@font-face {
+    font-family: "Strange Path";
+    src: url(../fonts/Strange\ Path.ttf);
+}
+
+@font-face {
+    font-family: "CC Wild Words Roman Font";
+    src: url(../fonts/ufonts.com_cc-wild-words-roman.ttf);
+}
+
+/* font import*/
+body {
+    margin: 0%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*-------------------HEADER-------------------*/
+.header {
+    font-family: "Nightcore Demo";
+    background-color: black;
+    font-size: 1.8rem;
+}
+
+.navbar-brand {
+    max-width: 200px;
+}
+
+.header__logo,
+.header__background {
+    max-width: 13%;
+    min-width: 15rem;
+}
+
+.header * {
+    animation: fadeInDown 0.5s;
+}
+
+.navbar-toggler {
+    border: 5px solid white;
+}
+
+/*-------------------FOOTER-------------------*/
+.footer {
+    font-family: "CC Wild Words Roman Font";
+    color: white;
+    background-color: black;
+    font-size: 1.4rem;
+}
+
+.footer__contact img {
+    height: 1.3em;
+}
+
+.footer__contact div a img {
+    height: 2.5rem
+}
+
+.footer section,
+.footer nav {
+    margin: 5px 0;
+}
+
+/*-------------------GENERAL PROPERTIES-------------------*/
+
+.navbar-dark .navbar-nav .nav-link,
+.nav-link {
+    text-decoration: none;
+    color: white;
+    list-style-type: none;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: rgba(197, 7, 0, 255);
+    font-weight: bold;
+}
+
+.navbar-dark .navbar-text a, .navbar-dark .navbar-text a:focus, .navbar-dark .navbar-text a:hover {
+    color: rgba(197, 7, 0, 255);
+}
+
+.nav-link:hover {
+    color: rgba(197, 7, 0, 255);
+    font-weight: bold;
+}
+
+.background * {
+    animation: fadeIn 1s;
+}
+
+.background p {
+    font-size: 1.1rem;
+}
+
+/*-------------------MIDDLE SECTION - ALL SITES-------------------*/
+/*middle background*/
+.background {
+    background: url(../img/backgroundMiddle.png), rgb(252, 252, 252);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.header__blend {
+    width: 100%;
+    height: 6rem;
+    background: url(../img/backgroundTopBlend.png),
+        linear-gradient(rgb(36, 36, 36), white);
+    background-position: center bottom;
+    background-blend-mode: multiply;
+    mix-blend-mode: multiply;
+    animation: fadeInDown 0.7s;
+}
+
+.footer__blend {
+    width: 100%;
+    height: 6rem;
+    background: url(../img/backgroundBottomBlend.png),
+        linear-gradient(white, rgb(37, 30, 30));
+    background-blend-mode: multiply;
+    mix-blend-mode: multiply;
+    animation: fadeInUp 0.7s;
+}
+
+/*middle content*/
+.boxItem {
+    /*Gives background and border to all items that need it*/
+    background-color: white;
+    border: 3px;
+    margin: 0;
+    border-color: black;
+    border-style: solid;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.boxText {
+    padding: 1rem;
+    color: black;
+    font-family: "CC Wild Words Roman Font";
+}
+
+.boxDecoImg {
+    object-fit: cover;
+}
+
+.boxSectionTitle {
+    text-align: center;
+    grid-column: 1 / -1;
+    /*Sets titles to ocuppy full witdh*/
+}
+
+.gridContainer {
+    /*Basic setup for any grid in the middle section*/
+    display: grid;
+    margin: 0;
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.gridContainerUncenter {
+    /*Same as above, not centered*/
+    display: grid;
+    margin: 0;
+    gap: 1rem;
+}
+
+.titleBodyContainer {
+    /*Format for any element that contains a title/body pair*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleBodyContainer * {
+    /*Both title and body elements inside above container */
+    font-weight: 500;
+    margin: 0;
+    padding: 5px;
+}
+
+.square {
+    /*Format for any responsive square*/
+    object-fit: contain;
+    max-width: 150px;
+    max-height: 150px;
+    width: 100%;
+}
+
+.textLinks {
+    color: rgba(197, 7, 0, 255);
+}
+
+.textLinks:hover {
+    /*For any anchor within a text*/
+    text-decoration: none;
+    color: rgba(197, 7, 0, 255);
+    font-weight: bold;
+}
+
+.row>img {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/*-------------------MIDDLE SECTION - INDEX-------------------*/
+.products a:hover {
+    color: rgba(197, 7, 0, 255);
+}
+
+.reviewItem {
+    font-size: 1rem;
+    max-width: 85%;
+    width: fit-content;
+    height: 100%;
+}
+
+/*-------------------MIDDLE SECTION - INDEX & PRODUCTS-------------------*/
+.products div,
+.products img,
+.products a {
+    transition: all 0.2s ease-in-out;
+}
+
+.products div:hover,
+.products img:hover,
+.products a:hover {
+    transform: scale(120%);
+}
+
+.products a {
+    font-family: "Nightcore Demo";
+    color: black;
+    font-size: 2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*-------------------MIDDLE SECTION - PRODUCTS-------------------*/
+/* revisar*/
+.products h4 {
+    display: none;
+}
+
+.reviewItem h4 {
+    display: block;
+}
+
+/*-------------------MIDDLE SECTION - SERVICES-------------------*/
+.section__services img {
+    max-height: 20rem;
+}
+
+/*-------------------MIDDLE SECTION - FAQ-------------------*/
+.section__faq details {
+    padding: 0;
+    margin: 3px 0;
+    width: 100%;
+}
+
+.section__faq details summary {
+    cursor: pointer;
+    padding: 1rem 0.5rem;
+}
+
+.section__faq details ul {
+    list-style: none;
+}
+
+/*-------------------MIDDLE SECTION - CONTACT-------------------*/
+.section__contact__form * {
+    margin: 2px 0;
+}
+
+.section__contact__form input,
+.section__contact__form textarea {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    max-width: 100%;
+}
+
+/*-------------------SCREEN SIZE ADJUSTMENTS - INDEX-------------------*/
+/* X-small screens */
+@media only screen and (max-width: 575px) {
+    .intro__1 {
+        order: 1;
+    }
+
+    .intro__2 {
+        order: 3;
+    }
+
+    .intro__3 {
+        order: 5;
+    }
+
+    .intro__imgCrack {
+        order: 6;
+    }
+
+    .intro__imgGriffith {
+        order: 2;
+    }
+
+    .intro__imgLandscape {
+        order: 4;
+    }
+}
+
+/* Small screens */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .intro__1 {
+        order: 1;
+    }
+
+    .intro__2 {
+        order: 3;
+    }
+
+    .intro__3 {
+        order: 8;
+    }
+
+    .intro__imgCrack {
+        order: 7;
+    }
+
+    .intro__imgPuck {
+        display: none;
+    }
+
+    .intro__imgGriffith {
+        order: 2;
+    }
+
+    .intro__imgZodd {
+        order: 5;
+    }
+
+    .intro__imgLandscape {
+        order: 6;
+    }
+}
+
+/* Medium screens and above */
+@media only screen and (min-width: 768px) {
+    .boxTextFit {
+        /*Limits heights of boxes that should fit to text*/
+        height: fit-content;
+
+    }
+
+    .intro {
+        display: grid;
+        grid-template-rows: repeat(10, 6rem);
+        grid-template-columns: repeat(6, 1fr);
+        gap: 2rem;
+    }
+
+    .intro__1 {
+        grid-row: 1 / 3;
+        grid-column: 1 / 6;
+        z-index: 2;
+    }
+
+    .intro__2 {
+        grid-row: 5 / 8;
+        grid-column: 3 / 7;
+        z-index: 2;
+    }
+
+    .intro__3 {
+        grid-row: 9 / 11;
+        grid-column: 1 / 5;
+        z-index: 2;
+    }
+
+    .intro__imgGuts {
+        grid-row: 2 / 4;
+        grid-column: 5 / 7;
+        z-index: 1;
+        max-width: 100%;
+    }
+
+    .intro__imgGriffith {
+        grid-row: 4/ 5;
+        grid-column: 2 / 6;
+        z-index: 1;
+        max-width: 100%;
+        height: 175%;
+        transform: scaleX(-1);
+    }
+
+    .intro__imgPuck {
+        grid-row: 8 / 10;
+        grid-column: 5 / 7;
+        z-index: 0;
+        max-width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    .intro__imgZodd {
+        grid-row: 6 / 11;
+        grid-column: 1 / 3;
+        z-index: 1;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .intro__imgCrack {
+        display: none;
+    }
+
+    .intro__imgLandscape {
+        grid-row: 11 / 13;
+        grid-column: 1 / 7;
+        max-height: 270px;
+    }
+}

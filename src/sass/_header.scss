@@ -1,0 +1,50 @@
+.header {
+    font-family: $flavorFont;
+    background-color: black;
+    font-size: 1.8rem;
+
+    * {
+        animation: fadeInDown 0.5s;
+    }
+
+    .navbar-dark {
+        .navbar-brand{
+            max-width: 13%;
+            min-width: 17rem;
+        
+        .header__logo {
+            max-width: 13%;
+            min-width: 17rem;
+        }
+
+        .navbar-toggler {
+            border: 5px solid white;
+        }
+    }
+        .header__background {
+            max-width: 13%;
+            min-width: 17rem;
+        }
+
+        .navbar-nav {
+            .nav-link {
+                text-decoration: none;
+                color: white;
+                list-style-type: none;
+            }
+
+            .header-link {
+                text-decoration: none;
+                color: white;
+                list-style-type: none;
+
+                &:hover {
+                    color: $highlightColor !important;
+                    font-weight: bold;
+                }
+            }
+        }
+
+
+    }
+}

@@ -1,0 +1,12 @@
+@import 'variables';
+@import 'fonts';
+@import 'footer';
+@import 'header';
+@import 'middle';
+
+body {
+	margin: 0%;
+	* {
+		box-sizing: border-box;
+	}
+}

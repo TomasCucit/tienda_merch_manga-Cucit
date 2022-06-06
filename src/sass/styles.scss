@@ -1,8 +1,7 @@
-@import 'variables';
-@import 'fonts';
-@import 'footer';
-@import 'header';
-@import 'middle';
+@use 'index';
+@use 'footer';
+@use 'header';
+@use 'middle';
 
 body {
 	margin: 0%;

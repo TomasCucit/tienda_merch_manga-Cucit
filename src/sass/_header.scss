@@ -1,5 +1,7 @@
+@use 'index';
+
 .header {
-    font-family: $flavorFont;
+    font-family: index.$flavorFont;
     background-color: black;
     font-size: 1.8rem;
 
@@ -39,7 +41,7 @@
                 list-style-type: none;
 
                 &:hover {
-                    color: $highlightColor !important;
+                    color: index.$highlightColor !important;
                     font-weight: bold;
                 }
             }

@@ -1,3 +1,5 @@
+@use 'index';
+
 .background {
     * {
         animation: fadeIn 1s;
@@ -46,7 +48,7 @@
     .boxText {
         padding: 1rem;
         color: black;
-        font-family: $mainFont;
+        font-family: index.$mainFont;
     }
 
     .boxDecoImg {
@@ -81,11 +83,11 @@
     }
 
     .textLinks {
-        color: $highlightColor;
+        color: index.$highlightColor;
 
         &:hover {
             text-decoration: none;
-            color: $highlightColor;
+            color: index.$highlightColor;
             font-weight: bold;
         }
     }
@@ -100,12 +102,12 @@
     .products {
         a {
             &:hover {
-                color: $highlightColor;
+                color: index.$highlightColor;
                 transform: scale(120%);
             }
 
             transition: all 0.2s ease-in-out;
-            font-family: $flavorFont;
+            font-family: index.$flavorFont;
             color: black;
             font-size: 2rem;
             text-decoration: none;
@@ -150,7 +152,7 @@
     .section__contact__form{
         input,
         textarea {
-            font-family: $normalFont;
+            font-family: index.$normalFont;
             max-width: 100%;
         }
         p {
@@ -161,7 +163,7 @@
     /* INDEX */
     .container {
         .intro {
-            @media (min-width: $bp-md) {
+            @media (min-width: index.$bp-md) {
                 display: grid;
                 grid-template-rows: repeat(10, 6rem);
                 grid-template-columns: repeat(6, 1fr);
@@ -193,7 +195,7 @@
             order: 4;
         }
 
-        @media (min-width: $bp-sm) {
+        @media (min-width: index.$bp-sm) {
             .intro__1 {
                 order: 1;
             }
@@ -227,7 +229,7 @@
             }
         }
 
-        @media (min-width: $bp-md) {
+        @media (min-width: index.$bp-md) {
             .boxTextFit {
                 height: fit-content;
             }

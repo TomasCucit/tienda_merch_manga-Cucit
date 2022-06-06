@@ -1,5 +1,7 @@
+@use 'index';
+
 .footer {
-	font-family: $mainFont;
+	font-family: index.$mainFont;
 	color: white;
 	background-color: black;
 	font-size: 1.4rem;
@@ -15,7 +17,7 @@
 			padding: 0.1rem 0;
 
 			&:hover {
-				color: $highlightColor;
+				color: index.$highlightColor;
 				font-weight: bold;
 			}
 		}

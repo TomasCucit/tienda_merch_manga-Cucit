@@ -1,7 +1,7 @@
 @use 'index';
 
 .header {
-    font-family: index.$flavorFont;
+    @extend .font-flavor;
     background-color: black;
     font-size: 1.8rem;
 
@@ -14,7 +14,7 @@
             max-width: 13%;
             min-width: 17rem;
         
-        .header__logo {
+        .header-logo {
             max-width: 13%;
             min-width: 17rem;
         }
@@ -23,7 +23,7 @@
             border: 5px solid white;
         }
     }
-        .header__background {
+        .header-background {
             max-width: 13%;
             min-width: 17rem;
         }

@@ -1,7 +1,7 @@
 @use 'index';
 
 .footer {
-	font-family: index.$mainFont;
+	@extend .font-main;
 	color: white;
 	background-color: black;
 	font-size: 1.4rem;
@@ -22,7 +22,7 @@
 			}
 		}
 
-	.footer__contact {
+	.footer-contact {
 		img {
 			height: 1.3em;
 		}

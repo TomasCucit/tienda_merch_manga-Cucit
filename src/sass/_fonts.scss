@@ -18,7 +18,13 @@
 	src: url(../fonts/ufonts.com_cc-wild-words-roman.ttf);
 }
 
-$fonts:(flavorFont:"Nightcore Demo", mainFont:"CC Wild Words Roman Font", normalFont:"Trebuchet MS");
-$flavorFont: "Nightcore Demo";
-$mainFont: "CC Wild Words Roman Font";
-$normalFont: "Trebuchet MS";
+$fonts:(
+	"flavor":"Nightcore Demo",
+	"main":"CC Wild Words Roman Font",
+	"normal":"Trebuchet MS");
+
+@each $key, $val in $fonts {
+	.font-#{$key} {
+		font-family: ($val)
+	}
+}

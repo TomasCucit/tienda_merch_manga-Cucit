@@ -1,13 +1,13 @@
 @use 'index' as *;
 
+p {
+    font-size: map-get($font-sizes, "fs7");
+    margin: 0;
+}
 .background {
     @extend .font-main;
     * {
         animation: fadeIn 1s;
-    }
-
-    p {
-        font-size: 1.1rem;
     }
 
     background: url(../img/backgroundMiddle.png),
@@ -65,18 +65,19 @@
         width: 100%;
     }
 
+    .rectangle {
+        @extend .boxItem;
+        object-fit: contain;
+        width: 150px;
+        height: 200px;
+    }
+
     .titleBodyContainer {
         /*For elements that have a pair of head-text elements, like reviews*/
         display: flex;
         flex-direction: column;
-        align-items: center;
+        text-align: center;
         justify-content: center;
-
-        * {
-            font-weight: 500;
-            margin: 0;
-            padding: 5px;
-        }
     }
 
     .textLinks {
@@ -104,7 +105,7 @@
             }
             transition: all 0.2s ease-in-out;
             color: black;
-            font-size: 2rem;
+            font-size: map-get($font-sizes, "fs1");
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -134,11 +135,9 @@
     }
 
     .reviewItem {
-        font-size: 1rem;
         max-width: 85%;
         width: fit-content;
         height: 100%;
-
         h4 {
             display: block;
         }
@@ -297,5 +296,39 @@ details {
     ul { 
         margin-top: 0.3rem;
         margin-bottom: 0;
+    }
+}
+
+/*Products*/
+.section-productsOur {
+    div {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: space-around;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            transform: scale(130%);
+        }
+    }
+    img {
+        max-height: 80%;
+        max-width: 100%;
+    }
+    h6 {
+        display: none;
+    }
+
+    div:hover {
+        & h6 {
+            transition: all 0.2s ease-in-out;
+            display: block;
+            font-size: 15px;
+        }
     }
 }

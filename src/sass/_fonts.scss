@@ -28,3 +28,19 @@ $fonts:(
 		font-family: ($val)
 	}
 }
+
+$font-sizes:(
+	"fs1": 30px,
+	"fs2": 27px,
+	"fs3": 25px,
+	"fs4": 23px,
+	"fs5": 20px,
+	"fs6": 18px,
+	"fs7": 17px,
+);
+
+@for $i from 1 through 6 {
+	h#{$i} {
+		font-size: map-get($font-sizes, "fs#{$i}");
+	}
+}

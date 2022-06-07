@@ -1,9 +1,9 @@
-@use 'index';
+@use 'index' as *;
 
 .header {
     @extend .font-flavor;
     background-color: black;
-    font-size: 1.8rem;
+    font-size: map-get($font-sizes, "fs1");
 
     * {
         animation: fadeInDown 0.5s;
@@ -41,7 +41,7 @@
                 list-style-type: none;
 
                 &:hover {
-                    color: index.$highlightColor !important;
+                    color: $highlightColor !important;
                     font-weight: bold;
                 }
             }

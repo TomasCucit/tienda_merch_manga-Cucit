@@ -4,6 +4,9 @@
     @extend .font-flavor;
     background-color: black;
     font-size: map-get($font-sizes, "fs1");
+    @media (min-width: map-get($breakpoints, bp-md)) and (max-width: map-get($breakpoints, bp-lg)) {
+        font-size: map-get($font-sizes, "fs2");;
+    }
 
     * {
         animation: fadeInDown 0.5s;

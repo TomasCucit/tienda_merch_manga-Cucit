@@ -52,6 +52,7 @@ p {
 
     .boxSectionTitle {
         @extend .boxItem;
+        @extend .boxText;
         text-align: center;
         grid-column: 1 / -1;
     }
@@ -302,10 +303,6 @@ details {
 /*Products*/
 .section-productsOur {
     div {
-        position: relative;
-        display: inline-block;
-        cursor: pointer;
-
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -328,7 +325,16 @@ details {
         & h6 {
             transition: all 0.2s ease-in-out;
             display: block;
-            font-size: 15px;
+            font-size: map-get($font-sizes, "fs8");
+        }
+    }
+}
+
+/*Services*/
+.section-services {
+    .boxDecoImg {
+        @media (min-width: map-get($breakpoints, bp-lg)) {
+            max-height: 270px;
         }
     }
 }

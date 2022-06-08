@@ -1,3 +1,5 @@
+@use 'breakpoints' as *;
+
 @font-face {
 	font-family: "Help Me";
 	src: url(../fonts/HelpMe.ttf);
@@ -18,25 +20,25 @@
 	src: url(../fonts/ufonts.com_cc-wild-words-roman.ttf);
 }
 
-$fonts:(
-	"flavor":"Nightcore Demo",
+$fonts:("flavor":"Nightcore Demo",
 	"main":"CC Wild Words Roman Font",
 	"normal":"Trebuchet MS");
 
-@each $key, $val in $fonts {
+@each $key,
+$val in $fonts {
 	.font-#{$key} {
 		font-family: ($val)
 	}
-}
+};
 
-$font-sizes:(
-	"fs1": 30px,
-	"fs2": 27px,
-	"fs3": 25px,
-	"fs4": 23px,
-	"fs5": 20px,
-	"fs6": 18px,
-	"fs7": 17px,
+$font-sizes:("fs1": 1.7rem,
+	"fs2": 1.2rem,
+	"fs3": 1.25rem,
+	"fs4": 1.2rem,
+	"fs5": 1.1rem,
+	"fs6": 1.05rem,
+	"fs7": 1rem,
+	"fs8": 0.8rem,
 );
 
 @for $i from 1 through 6 {

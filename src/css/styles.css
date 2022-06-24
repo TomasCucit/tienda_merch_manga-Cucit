@@ -1,103 +1,130 @@
-@charset "UTF-8";
-
-/*fonts*/
-/*colors*/
 @font-face {
   font-family: "Help Me";
   src: url(../fonts/HelpMe.ttf);
 }
-
 @font-face {
   font-family: "Nightcore Demo";
   src: url(../fonts/NightcoreDemo.ttf);
 }
-
 @font-face {
   font-family: "Strange Path";
   src: url(../fonts/StrangePath.ttf);
 }
-
 @font-face {
-  font-family: "CC Wild Words Roman Font";
+  font-family: "CC Wild Words Roman font";
   src: url(../fonts/ufonts.com_cc-wild-words-roman.ttf);
 }
-
-.footer {
-  font-family: "CC Wild Words Roman Font";
-  color: white;
-  background-color: black;
-  font-size: 1.4rem;
+@font-face {
+  font-family: "New Wild Words";
+  src: url(../fonts/New_Wild_Words.TTF);
+}
+.font-flavor, .header {
+  font-family: "Nightcore Demo";
 }
 
+.font-main, .background, .footer {
+  font-family: "New Wild Words";
+}
+
+.font-normal {
+  font-family: "Trebuchet MS";
+}
+
+h1 {
+  font-size: 1.7rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 1.05rem;
+}
+
+/*colors*/
+.footer {
+  color: white;
+  background-color: black;
+  font-size: 1.05rem;
+}
 .footer section {
   margin: 5px 0;
 }
-
 .footer .footer-link {
   text-decoration: none;
   color: white;
   list-style-type: none;
   padding: 0.1rem 0;
 }
-
 .footer .footer-link:hover {
   color: rgb(197, 7, 0);
   font-weight: bold;
 }
-
-.footer .footer__contact img {
+.footer .footer-contact img {
   height: 1.3em;
 }
-
-.footer .footer__contact div a img {
+.footer .footer-contact div a img {
   height: 2.5rem;
 }
 
 .header {
-  font-family: "Nightcore Demo";
   background-color: black;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
-
+@media (min-width: 768px) and (max-width: 992px) {
+  .header {
+    font-size: 1.2rem;
+  }
+}
 .header * {
-  -webkit-animation: fadeInDown 0.5s;
   animation: fadeInDown 0.5s;
 }
-
 .header .navbar-dark .navbar-brand {
   max-width: 13%;
   min-width: 17rem;
 }
-
-.header .navbar-dark .navbar-brand .header__logo {
+.header .navbar-dark .navbar-brand .header-logo {
   max-width: 13%;
   min-width: 17rem;
 }
-
 .header .navbar-dark .navbar-brand .navbar-toggler {
   border: 5px solid white;
 }
-
-.header .navbar-dark .header__background {
+.header .navbar-dark .header-background {
   max-width: 13%;
   min-width: 17rem;
 }
-
 .header .navbar-dark .navbar-nav .nav-link {
   text-decoration: none;
   color: white;
   list-style-type: none;
 }
-
 .header .navbar-dark .navbar-nav .header-link {
   text-decoration: none;
   color: white;
   list-style-type: none;
 }
-
 .header .navbar-dark .navbar-nav .header-link:hover {
   color: rgb(197, 7, 0) !important;
   font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+  margin: 0;
 }
 
 .background {
@@ -108,38 +135,26 @@
   /*formats for items inside panel-like boxes*/
   /* INDEX */
 }
-
 .background * {
-  -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
 }
-
-.background p {
-  font-size: 1.1rem;
-}
-
-.background .header__blend {
+.background .header-blend {
   width: 100%;
   height: 6rem;
-  background: url(../img/backgroundTopBlend.png), linear-gradient(rgb(36, 36, 36), white);
-  background-position: center bottom;
   background-blend-mode: multiply;
   mix-blend-mode: multiply;
-  -webkit-animation: fadeInDown 0.7s;
+  background: url(../img/backgroundTopBlend.png), linear-gradient(rgb(36, 36, 36), white);
   animation: fadeInDown 0.7s;
 }
-
-.background .footer__blend {
+.background .footer-blend {
   width: 100%;
   height: 6rem;
-  background: url(../img/backgroundBottomBlend.png), linear-gradient(white, rgb(37, 30, 30));
   background-blend-mode: multiply;
   mix-blend-mode: multiply;
-  -webkit-animation: fadeInUp 0.7s;
+  background: url(../img/backgroundBottomBlend.png), linear-gradient(white, rgb(36, 36, 36));
   animation: fadeInUp 0.7s;
 }
-
-.background .boxItem {
+.background .boxItem, .background .rectangle, .background .square, .background .boxSectionTitle, .background .boxDecoImg, .background .boxText {
   background-color: white;
   border: 3px;
   margin: 0;
@@ -148,121 +163,92 @@
   border-radius: 7px;
   overflow: hidden;
 }
-
-.background .boxText {
+.background .boxText, .background .boxSectionTitle {
   padding: 1rem;
   color: black;
-  font-family: "CC Wild Words Roman Font";
 }
-
 .background .boxDecoImg {
-  -o-object-fit: cover;
   object-fit: cover;
 }
-
 .background .boxSectionTitle {
   text-align: center;
   grid-column: 1/-1;
 }
-
 .background .square {
   /*makes element square*/
-  -o-object-fit: contain;
   object-fit: contain;
   max-width: 150px;
   max-height: 150px;
   width: 100%;
 }
-
+.background .rectangle {
+  object-fit: contain;
+  width: 150px;
+  height: 200px;
+}
 .background .titleBodyContainer {
   /*For elements that have a pair of head-text elements, like reviews*/
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
   justify-content: center;
 }
-
-.background .titleBodyContainer * {
-  font-weight: 500;
-  margin: 0;
-  padding: 5px;
-}
-
 .background .textLinks {
   color: rgb(197, 7, 0);
 }
-
 .background .textLinks:hover {
   text-decoration: none;
   color: rgb(197, 7, 0);
   font-weight: bold;
 }
-
 .background .row img {
   padding-right: 0;
   padding-left: 0;
 }
-
 .background .products a {
   transition: all 0.2s ease-in-out;
-  font-family: "Nightcore Demo";
   color: black;
-  font-size: 2rem;
+  font-size: 1.7rem;
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-
 .background .products a:hover {
   color: rgb(197, 7, 0);
   transform: scale(120%);
 }
-
 .background .products div {
   transition: all 0.2s ease-in-out;
 }
-
 .background .products div:hover {
   transform: scale(120%);
 }
-
 .background .products img {
   transition: all 0.2s ease-in-out;
 }
-
 .background .products img:hover {
   transform: scale(120%);
 }
-
 .background .products h4 {
   display: none;
 }
-
 .background .reviewItem {
-  font-size: 1rem;
   max-width: 85%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   height: 100%;
 }
-
 .background .reviewItem h4 {
   display: block;
 }
-
-.background .section__contact__form input,
-.background .section__contact__form textarea {
-  font-family: "Trebuchet MS";
+.background .section-contact-form input,
+.background .section-contact-form textarea {
   max-width: 100%;
 }
-
-.background .section__contact__form p {
+.background .section-contact-form p {
   margin: 5px 0;
 }
-
 @media (min-width: 768px) {
   .background .container .intro {
     display: grid;
@@ -271,98 +257,76 @@
     gap: 2rem;
   }
 }
-
-.background .container .intro__1 {
+.background .container .intro-1 {
   order: 1;
 }
-
-.background .container .intro__2 {
+.background .container .intro-2 {
   order: 3;
 }
-
-.background .container .intro__3 {
+.background .container .intro-3 {
   order: 5;
 }
-
-.background .container .intro__imgCrack {
+.background .container .intro-imgCrack {
   order: 6;
 }
-
-.background .container .intro__imgGriffith {
+.background .container .intro-imgGriffith {
   order: 2;
 }
-
-.background .container .intro__imgLandscape {
+.background .container .intro-imgLandscape {
   order: 4;
 }
-
 @media (min-width: 576px) {
-  .background .container .intro__1 {
+  .background .container .intro-1 {
     order: 1;
   }
-
-  .background .container .intro__2 {
+  .background .container .intro-2 {
     order: 3;
   }
-
-  .background .container .intro__3 {
+  .background .container .intro-3 {
     order: 8;
   }
-
-  .background .container .intro__imgCrack {
+  .background .container .intro-imgCrack {
     order: 7;
   }
-
-  .background .container .intro__imgPuck {
+  .background .container .intro-imgPuck {
     display: none;
   }
-
-  .background .container .intro__imgGriffith {
+  .background .container .intro-imgGriffith {
     order: 2;
   }
-
-  .background .container .intro__imgZodd {
+  .background .container .intro-imgZodd {
     order: 5;
   }
-
-  .background .container .intro__imgLandscape {
+  .background .container .intro-imgLandscape {
     order: 6;
   }
 }
-
 @media (min-width: 768px) {
   .background .container .boxTextFit {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
     height: fit-content;
   }
-
-  .background .container .intro__1 {
+  .background .container .intro-1 {
     grid-row: 1/3;
     grid-column: 1/6;
     z-index: 2;
   }
-
-  .background .container .intro__2 {
+  .background .container .intro-2 {
     grid-row: 5/8;
     grid-column: 3/7;
     z-index: 2;
   }
-
-  .background .container .intro__3 {
+  .background .container .intro-3 {
     grid-row: 9/11;
     grid-column: 1/5;
     z-index: 2;
   }
-
-  .background .container .intro__imgGuts {
+  .background .container .intro-imgGuts {
     grid-row: 2/4;
     grid-column: 5/7;
     z-index: 1;
     max-width: 100%;
   }
-
-  .background .container .intro__imgGriffith {
+  .background .container .intro-imgGriffith {
     grid-row: 4/5;
     grid-column: 2/6;
     z-index: 1;
@@ -370,8 +334,7 @@
     height: 175%;
     transform: scaleX(-1);
   }
-
-  .background .container .intro__imgPuck {
+  .background .container .intro-imgPuck {
     grid-row: 8/10;
     grid-column: 5/7;
     z-index: 0;
@@ -379,22 +342,57 @@
     height: 100%;
     display: flex;
   }
-
-  .background .container .intro__imgZodd {
+  .background .container .intro-imgZodd {
     grid-row: 6/11;
     grid-column: 1/3;
     z-index: 1;
     max-width: 100%;
     max-height: 100%;
   }
-
-  .background .container .intro__imgCrack {
+  .background .container .intro-imgCrack {
     display: none;
   }
-
-  .background .container .intro__imgLandscape {
+  .background .container .intro-imgLandscape {
     grid-row: 11/13;
     grid-column: 1/7;
+    max-height: 270px;
+  }
+}
+
+/*FAQ*/
+details ul {
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+}
+
+/*Products*/
+.section-productsOur div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  transition: all 0.2s ease-in-out;
+}
+.section-productsOur div:hover {
+  transform: scale(130%);
+}
+.section-productsOur img {
+  max-height: 80%;
+  max-width: 100%;
+}
+.section-productsOur h6 {
+  display: none;
+}
+.section-productsOur div:hover h6 {
+  transition: all 0.2s ease-in-out;
+  display: block;
+  font-size: 0.8rem;
+}
+
+/*Services*/
+@media (min-width: 992px) {
+  .section-services .boxDecoImg {
     max-height: 270px;
   }
 }
@@ -402,9 +400,6 @@
 body {
   margin: 0%;
 }
-
 body * {
   box-sizing: border-box;
 }
-
-/*# sourceMappingURL=styles.css.map */

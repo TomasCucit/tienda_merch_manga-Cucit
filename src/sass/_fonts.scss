@@ -16,12 +16,17 @@
 }
 
 @font-face {
-	font-family: "CC Wild Words Roman Font";
+	font-family: "CC Wild Words Roman font";
 	src: url(../fonts/ufonts.com_cc-wild-words-roman.ttf);
 }
 
+@font-face {
+	font-family: "New Wild Words";
+	src: url(../fonts/New_Wild_Words.TTF)
+}
+
 $fonts:("flavor":"Nightcore Demo",
-	"main":"CC Wild Words Roman Font",
+	"main":"New Wild Words",
 	"normal":"Trebuchet MS");
 
 @each $key,

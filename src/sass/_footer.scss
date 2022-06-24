@@ -1,26 +1,26 @@
-@use 'index' as *;
+@use 'index'as *;
 
 .footer {
 	@extend .font-main;
 	color: white;
 	background-color: black;
-    font-size: map-get($font-sizes, "fs6");
+	font-size: map-get($font-sizes, "fs6");
 
 	section {
 		margin: 5px 0;
 	}
 
-		.footer-link {
-			text-decoration: none;
-			color: white;
-			list-style-type: none;
-			padding: 0.1rem 0;
+	.footer-link {
+		text-decoration: none;
+		color: white;
+		list-style-type: none;
+		padding: 0.1rem 0;
 
-			&:hover {
-				color: $highlightColor;
-				font-weight: bold;
-			}
+		&:hover {
+			color: $highlightColor;
+			font-weight: bold;
 		}
+	}
 
 	.footer-contact {
 		img {
